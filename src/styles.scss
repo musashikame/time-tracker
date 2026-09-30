@@ -1,14 +1,17 @@
 :root {
-  --bg: #f4f5f7;
+  --bg: #FAFAFA;
   --surface: #ffffff;
-  --border: #e0e2e7;
-  --text: #1c1e21;
-  --text-muted: #6b7280;
-  --accent: #3266ad;
-  --accent-dark: #234a80;
-  --danger: #c0392b;
+  --border: #E5E5E5;
+  --text: #1A1A1A;
+  --text-muted: #6F6F6F;
+  --accent: #A01441;
+  --accent-dark: #7A0E32;
+  --accent-tint: #F4E1E7;
+  --danger: #7A0E32;
   --success: #1d9e75;
-  --radius: 8px;
+  --radius: 10px;
+  --font-display: "Saira", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
 * {
@@ -22,7 +25,7 @@ body {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
 }
@@ -30,18 +33,23 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-weight: 700;
   margin: 0 0 0.75rem;
 }
 
 a {
   color: var(--accent);
 }
+a:hover {
+  color: var(--accent-dark);
+}
 
 .card {
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
   padding: 1.25rem;
 }
 
@@ -60,6 +68,8 @@ a {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
 }
@@ -89,13 +99,14 @@ a {
 }
 
 .btn-danger:hover {
-  background: #fdecea;
+  background: #F4E1E7;
 }
 
 input,
 select,
 textarea {
   font: inherit;
+  font-family: var(--font-body);
   padding: 8px 10px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -146,6 +157,7 @@ th {
   padding: 2px 8px;
   border-radius: 999px;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .muted {

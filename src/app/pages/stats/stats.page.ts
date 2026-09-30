@@ -166,7 +166,7 @@ export class StatsPageComponent implements OnInit {
           {
             label: 'Hours',
             data,
-            backgroundColor: '#3266ad',
+            backgroundColor: '#A01441',
             borderRadius: 4,
             maxBarThickness: 24,
           },
@@ -176,7 +176,7 @@ export class StatsPageComponent implements OnInit {
         plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false }, ticks: { autoSkip: true, maxRotation: 45 } },
-          y: { beginAtZero: true, grid: { color: '#e1e0d9' } },
+          y: { beginAtZero: true, grid: { color: '#E5E5E5' } },
         },
       },
     };

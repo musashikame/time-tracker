@@ -43,12 +43,12 @@ interface DayCell {
               type="button"
               (click)="selectDay(cell.key)"
               style="border:none; border-radius:6px; padding:8px 4px; min-height:56px; cursor:pointer; text-align:left;"
-              [style.background]="cell.key === selectedKey() ? '#e6f1fb' : 'transparent'"
+              [style.background]="cell.key === selectedKey() ? '#F4E1E7' : 'transparent'"
               [style.opacity]="cell.inMonth ? 1 : 0.35"
             >
               <div [style.font-weight]="cell.isToday ? 700 : 400">{{ cell.date.getDate() }}</div>
               @if (cell.hours > 0) {
-                <div style="font-size:12px; color:#185fa5;">{{ cell.hours.toFixed(1) }}h</div>
+                <div style="font-size:12px; color:#A01441; font-weight:600;">{{ cell.hours.toFixed(1) }}h</div>
               }
             </button>
           }

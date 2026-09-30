@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DataStoreService } from '../../services/data-store.service';
 import { SyncStatusComponent } from '../../shared/sync-status.component';
 
-const PALETTE = ['#3266ad', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#6250d6', '#e34948', '#008300'];
+const PALETTE = ['#139EAD', '#5866E3', '#70DC51', '#F5B510', '#D74B94', '#8B5CF6', '#E07B39', '#5C7A99'];
 
 @Component({
   selector: 'app-projects-page',
@@ -32,7 +32,7 @@ const PALETTE = ['#3266ad', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#6250d6
                   type="button"
                   (click)="newColor.set(c)"
                   [style.background]="c"
-                  [style.outline]="newColor() === c ? '2px solid #1c1e21' : 'none'"
+                  [style.outline]="newColor() === c ? '2px solid #1A1A1A' : 'none'"
                   style="width:24px;height:24px;border-radius:50%;border:none;cursor:pointer;"
                   [attr.aria-label]="'Pick color ' + c"
                 ></button>
@@ -55,7 +55,7 @@ const PALETTE = ['#3266ad', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#6250d6
           @for (p of store.projects(); track p.id) {
             <tr>
               <td>
-                <span class="badge" [style.background]="p.color + '22'" [style.color]="p.color">
+                <span class="badge" [style.background]="p.color + '1A'" [style.color]="p.color">
                   {{ p.name }}
                 </span>
               </td>

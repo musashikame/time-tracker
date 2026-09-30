@@ -34,10 +34,10 @@ export class SyncStatusComponent {
   }
 
   badgeBg(): string {
-    return this.store.status() === 'error' ? '#fdecea' : '#e1f5ee';
+    return this.store.status() === 'error' ? '#F4E1E7' : '#EAF7F1';
   }
 
   badgeColor(): string {
-    return this.store.status() === 'error' ? '#c0392b' : '#0f6e56';
+    return this.store.status() === 'error' ? '#7A0E32' : '#1d9e75';
   }
 }

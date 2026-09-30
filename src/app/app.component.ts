@@ -9,7 +9,7 @@ import { SettingsService } from './services/settings.service';
   template: `
     @if (settings.isConfigured()) {
       <nav
-        style="display:flex; gap:4px; padding:0 1.5rem; background:#fff; border-bottom:1px solid #e0e2e7;"
+        style="display:flex; gap:4px; padding:0 1.5rem; background:#fff; border-bottom:1px solid #E5E5E5;"
       >
         <a routerLink="/tracker" routerLinkActive="active" class="nav-link">Timer</a>
         <a routerLink="/calendar" routerLinkActive="active" class="nav-link">Calendar</a>
@@ -23,15 +23,17 @@ import { SettingsService } from './services/settings.service';
   styles: [
     `
       .nav-link {
+        font-family: "Saira", system-ui, sans-serif;
+        font-weight: 500;
         padding: 14px 12px;
-        color: #6b7280;
+        color: #6F6F6F;
         text-decoration: none;
         font-size: 14px;
         border-bottom: 2px solid transparent;
       }
       .nav-link.active {
-        color: #1c1e21;
-        border-bottom-color: #3266ad;
+        color: #1A1A1A;
+        border-bottom-color: #A01441;
       }
     `,
   ],

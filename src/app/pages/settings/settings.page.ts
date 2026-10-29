@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,6 +8,7 @@ import { GitHubDbService } from '../../services/github-db.service';
 @Component({
     selector: 'app-settings-page',
     imports: [FormsModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <div class="page">
       <h1>GitHub connection</h1>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { SettingsService } from './services/settings.service';
 
@@ -19,6 +19,7 @@ import { SettingsService } from './services/settings.service';
     }
     <router-outlet />
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: [
         `
       .nav-link {

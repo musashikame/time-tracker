@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, withHashLocation } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withXhr } from '@angular/common/http';
 
 import { routes } from './app.routes';
 
@@ -10,6 +10,6 @@ export const appConfig: ApplicationConfig = {
     // Hash-based routing avoids needing a server-side rewrite rule, which
     // static hosts like GitHub Pages don't provide.
     provideRouter(routes, withHashLocation()),
-    provideHttpClient(),
+    provideHttpClient(withXhr()),
   ],
 };

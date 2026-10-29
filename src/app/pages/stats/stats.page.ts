@@ -1,4 +1,4 @@
-import { Component, OnInit, computed, signal } from '@angular/core';
+import { Component, OnInit, computed, signal, ChangeDetectionStrategy } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { ChartConfiguration } from 'chart.js/auto';
@@ -12,6 +12,7 @@ type Range = 7 | 30 | 90;
 @Component({
     selector: 'app-stats-page',
     imports: [FormsModule, SyncStatusComponent, ChartCanvasComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">

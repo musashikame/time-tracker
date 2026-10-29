@@ -6,10 +6,9 @@ import { SettingsService } from '../../services/settings.service';
 import { GitHubDbService } from '../../services/github-db.service';
 
 @Component({
-  selector: 'app-settings-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
+    selector: 'app-settings-page',
+    imports: [CommonModule, FormsModule],
+    template: `
     <div class="page">
       <h1>GitHub connection</h1>
       <p class="muted">
@@ -55,7 +54,7 @@ import { GitHubDbService } from '../../services/github-db.service';
         </div>
       </div>
     </div>
-  `,
+  `
 })
 export class SettingsPageComponent {
   owner = '';

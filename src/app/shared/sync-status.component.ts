@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 import { DataStoreService } from '../services/data-store.service';
 
 @Component({
-  selector: 'app-sync-status',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-sync-status',
+    imports: [CommonModule],
+    template: `
     <span class="badge" [style.background]="badgeBg()" [style.color]="badgeColor()">
       {{ label() }}
     </span>
     @if (store.error(); as err) {
       <div class="error-text" style="margin-top:6px;">{{ err }}</div>
     }
-  `,
+  `
 })
 export class SyncStatusComponent {
   constructor(public store: DataStoreService) {}

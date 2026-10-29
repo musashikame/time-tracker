@@ -10,10 +10,9 @@ import { toDateKey } from '../../services/timer.service';
 type Range = 7 | 30 | 90;
 
 @Component({
-  selector: 'app-stats-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule, SyncStatusComponent, ChartCanvasComponent],
-  template: `
+    selector: 'app-stats-page',
+    imports: [CommonModule, FormsModule, SyncStatusComponent, ChartCanvasComponent],
+    template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h1>Overview</h1>
@@ -65,7 +64,7 @@ type Range = 7 | 30 | 90;
         />
       </div>
     </div>
-  `,
+  `
 })
 export class StatsPageComponent implements OnInit {
   range = signal<Range>(30);

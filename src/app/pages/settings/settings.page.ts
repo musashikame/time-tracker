@@ -1,15 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SettingsService } from '../../services/settings.service';
 import { GitHubDbService } from '../../services/github-db.service';
 
 @Component({
-  selector: 'app-settings-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
+    selector: 'app-settings-page',
+    imports: [FormsModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    template: `
     <div class="page">
       <h1>GitHub connection</h1>
       <p class="muted">
@@ -55,7 +55,7 @@ import { GitHubDbService } from '../../services/github-db.service';
         </div>
       </div>
     </div>
-  `,
+  `
 })
 export class SettingsPageComponent {
   owner = '';

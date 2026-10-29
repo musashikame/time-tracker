@@ -1,5 +1,5 @@
-import { Component, OnInit, computed, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, computed, signal, ChangeDetectionStrategy } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
 import { DataStoreService } from '../../services/data-store.service';
 import { SyncStatusComponent } from '../../shared/sync-status.component';
@@ -15,10 +15,10 @@ interface DayCell {
 }
 
 @Component({
-  selector: 'app-calendar-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule, SyncStatusComponent],
-  template: `
+    selector: 'app-calendar-page',
+    imports: [FormsModule, SyncStatusComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h1>Calendar</h1>
@@ -131,7 +131,7 @@ interface DayCell {
         </div>
       }
     </div>
-  `,
+  `
 })
 export class CalendarPageComponent implements OnInit {
   weekdayLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];

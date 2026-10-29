@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataStoreService } from '../../services/data-store.service';
@@ -8,10 +8,10 @@ import { SyncStatusComponent } from '../../shared/sync-status.component';
 import { TimeEntry } from '../../models/time-entry.model';
 
 @Component({
-  selector: 'app-tracker-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule, SyncStatusComponent],
-  template: `
+    selector: 'app-tracker-page',
+    imports: [CommonModule, FormsModule, SyncStatusComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h1>Timer</h1>
@@ -80,7 +80,7 @@ import { TimeEntry } from '../../models/time-entry.model';
         </tbody>
       </table>
     </div>
-  `,
+  `
 })
 export class TrackerPageComponent implements OnInit, OnDestroy {
   selectedProjectId = '';

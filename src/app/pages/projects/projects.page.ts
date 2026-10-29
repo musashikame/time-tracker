@@ -1,5 +1,5 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
+
 import { FormsModule } from '@angular/forms';
 import { DataStoreService } from '../../services/data-store.service';
 import { SyncStatusComponent } from '../../shared/sync-status.component';
@@ -7,10 +7,10 @@ import { SyncStatusComponent } from '../../shared/sync-status.component';
 const PALETTE = ['#139EAD', '#5866E3', '#70DC51', '#F5B510', '#D74B94', '#8B5CF6', '#E07B39', '#5C7A99'];
 
 @Component({
-  selector: 'app-projects-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule, SyncStatusComponent],
-  template: `
+    selector: 'app-projects-page',
+    imports: [FormsModule, SyncStatusComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h1>Projects</h1>
@@ -72,7 +72,7 @@ const PALETTE = ['#139EAD', '#5866E3', '#70DC51', '#F5B510', '#D74B94', '#8B5CF6
         </tbody>
       </table>
     </div>
-  `,
+  `
 })
 export class ProjectsPageComponent implements OnInit {
   palette = PALETTE;

@@ -7,12 +7,14 @@ import {
   OnDestroy,
   SimpleChanges,
   ViewChild,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { Chart, ChartConfiguration } from 'chart.js/auto';
 
 @Component({
   selector: 'app-chart-canvas',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div [style.height.px]="height">
       <canvas #canvas role="img" [attr.aria-label]="ariaLabel">{{ ariaLabel }}</canvas>

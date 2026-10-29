@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { DataStoreService } from '../services/data-store.service';
 
 @Component({
     selector: 'app-sync-status',
-    imports: [CommonModule],
+    imports: [],
     template: `
     <span class="badge" [style.background]="badgeBg()" [style.color]="badgeColor()">
       {{ label() }}

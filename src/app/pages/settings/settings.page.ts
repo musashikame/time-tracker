@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SettingsService } from '../../services/settings.service';
@@ -7,7 +7,7 @@ import { GitHubDbService } from '../../services/github-db.service';
 
 @Component({
     selector: 'app-settings-page',
-    imports: [CommonModule, FormsModule],
+    imports: [FormsModule],
     template: `
     <div class="page">
       <h1>GitHub connection</h1>

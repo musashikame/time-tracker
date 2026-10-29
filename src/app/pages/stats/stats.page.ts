@@ -1,5 +1,5 @@
 import { Component, OnInit, computed, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { ChartConfiguration } from 'chart.js/auto';
 import { DataStoreService } from '../../services/data-store.service';
@@ -11,7 +11,7 @@ type Range = 7 | 30 | 90;
 
 @Component({
     selector: 'app-stats-page',
-    imports: [CommonModule, FormsModule, SyncStatusComponent, ChartCanvasComponent],
+    imports: [FormsModule, SyncStatusComponent, ChartCanvasComponent],
     template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">

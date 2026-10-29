@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { DataStoreService } from '../../services/data-store.service';
 import { SyncStatusComponent } from '../../shared/sync-status.component';
@@ -8,7 +8,7 @@ const PALETTE = ['#139EAD', '#5866E3', '#70DC51', '#F5B510', '#D74B94', '#8B5CF6
 
 @Component({
     selector: 'app-projects-page',
-    imports: [CommonModule, FormsModule, SyncStatusComponent],
+    imports: [FormsModule, SyncStatusComponent],
     template: `
     <div class="page">
       <div style="display:flex; justify-content:space-between; align-items:center;">
